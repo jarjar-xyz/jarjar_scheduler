@@ -1,0 +1,10 @@
+scheduler-validator/node_modules
+scheduler-validator/dist
+scheduler-validator/build
+scheduler-validator/.env
+scheduler-validator/.env.prod
+scheduler-validator/.env.dev
+contracts/test_scheduler/build/
+contracts/jarjar_scheduler/build/
+
+!scheduler-validator/.env.example
