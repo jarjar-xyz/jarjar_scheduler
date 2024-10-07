@@ -2,6 +2,7 @@
 name = "jarjar_scheduler"
 edition = "2024.beta" # edition = "legacy" to use legacy (pre-2024) Move
 published-at="0x1295ff206bb3110949b2eead14a93792ced095184828e374aa00a70e7906e24b"
+authors=["jarjar.xyz"]
 # license = ""           # e.g., "MIT", "GPL", "Apache 2.0"
 # authors = ["..."]      # e.g., ["Joe Smith (joesmith@noemail.com)", "John Snow (johnsnow@noemail.com)"]
 
