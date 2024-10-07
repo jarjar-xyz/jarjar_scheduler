@@ -1,11 +1,12 @@
 [package]
 name = "jarjar_scheduler"
 edition = "2024.beta" # edition = "legacy" to use legacy (pre-2024) Move
+published-at="0x1295ff206bb3110949b2eead14a93792ced095184828e374aa00a70e7906e24b"
 # license = ""           # e.g., "MIT", "GPL", "Apache 2.0"
 # authors = ["..."]      # e.g., ["Joe Smith (joesmith@noemail.com)", "John Snow (johnsnow@noemail.com)"]
 
 [dependencies]
-Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/mainnet" }
 binks = { git = "https://github.com/jarjar-xyz/binks", subdir = "", rev = "main" }
 # binks = { local = "../../coins/binks" }
 # For remote import, use the `{ git = "...", subdir = "...", rev = "..." }`.
@@ -20,9 +21,9 @@ binks = { git = "https://github.com/jarjar-xyz/binks", subdir = "", rev = "main"
 # Override = { local = "../conflicting/version", override = true }
 
 [addresses]
-jarjar_scheduler = "0x0"
-# binks= "0xfe19f4b19be5204b261023e925dd6538a3f6333b86a4d766213e0adf8eb34f53"
-binks = "0x0"
+jarjar_scheduler="0x0"
+binks="0xc288caf405af52affcff65150c81e1c584453c0c13cbf3a938f51282a37e7031"
+# binks= "https://github.com/jarjar-xyz/jarjar_scheduler.git"
 
 # Named addresses will be accessible in Move as `@name`. They're also exported:
 # for example, `std = "0x1"` is exported by the Standard Library.
