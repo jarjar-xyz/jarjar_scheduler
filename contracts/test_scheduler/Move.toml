@@ -1,40 +1,20 @@
 [package]
 name = "test_scheduler"
 edition = "2024.beta" # edition = "legacy" to use legacy (pre-2024) Move
+published-at="0x25c3b9751885c81c8ced7356b7aa6fad4a3a837c1d92926667dc0b47aa2b4876"
+authors=["jarjar.xyz"]
 # license = ""           # e.g., "MIT", "GPL", "Apache 2.0"
 # authors = ["..."]      # e.g., ["Joe Smith (joesmith@noemail.com)", "John Snow (johnsnow@noemail.com)"]
 
 [dependencies]
-Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
-jarjar_scheduler = { git = "https://github.com/jarjar-xyz/jarjar_scheduler.git", subdir = "", rev = "main" }
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/mainnet" }
+jarjar_scheduler = { git = "https://github.com/jarjar-xyz/jarjar_scheduler.git", subdir = "contracts/jarjar_scheduler", rev = "main" }
 binks = { git = "https://github.com/jarjar-xyz/binks", subdir = "", rev = "main" }
 
-
-# jarjar_scheduler = { local = "../jarjar_scheduler" }
-# binks = { local = "../../coins/binks" }
-# For remote import, use the `{ git = "...", subdir = "...", rev = "..." }`.
-# Revision can be a branch, a tag, and a commit hash.
-# MyRemotePackage = { git = "https://some.remote/host.git", subdir = "remote/path"`, rev = "main" }
-
-# For local dependencies use `local = path`. Path is relative to the package root
-# Local = { local = "../path/to" }
-
-# To resolve a version conflict and force a specific version for dependency
-# override use `override = true`
-# Override = { local = "../conflicting/version", override = true }
-
 [addresses]
+binks="0xc288caf405af52affcff65150c81e1c584453c0c13cbf3a938f51282a37e7031"
+jarjar_scheduler="0x1295ff206bb3110949b2eead14a93792ced095184828e374aa00a70e7906e24b"
 test_scheduler = "0x0"
-binks="0x0"
-jarjar_scheduler="0x0"
-# 
-# jarjar_scheduler="0xbc6dea62e1c4f7f4b50c5e2226501af65a25b486f7f8063cad0c462466fb4d81"
-# binks = "0xfe19f4b19be5204b261023e925dd6538a3f6333b86a4d766213e0adf8eb34f53"
-
-
-# Named addresses will be accessible in Move as `@name`. They're also exported:
-# for example, `std = "0x1"` is exported by the Standard Library.
-# alice = "0xA11CE"
 
 [dev-dependencies]
 

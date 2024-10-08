@@ -2,7 +2,7 @@
 
 [move]
 version = 2
-manifest_digest = "3F9217AEB6C147294F4BC24F78C312B0EDCFC3F6F1D58EB381AB4EC2EE0C27A9"
+manifest_digest = "D924E9F7FC13DDC5028D9D2D5E7D69C977BD99009437D758F0D471F5BD893C47"
 deps_digest = "060AD7E57DFB13104F21BE5F5C3759D03F0553FC3229247D9A7A6B45F50D03A3"
 dependencies = [
   { name = "Sui" },
@@ -12,11 +12,11 @@ dependencies = [
 
 [[move.package]]
 name = "MoveStdlib"
-source = { git = "https://github.com/MystenLabs/sui.git", rev = "framework/testnet", subdir = "crates/sui-framework/packages/move-stdlib" }
+source = { git = "https://github.com/MystenLabs/sui.git", rev = "framework/mainnet", subdir = "crates/sui-framework/packages/move-stdlib" }
 
 [[move.package]]
 name = "Sui"
-source = { git = "https://github.com/MystenLabs/sui.git", rev = "framework/testnet", subdir = "crates/sui-framework/packages/sui-framework" }
+source = { git = "https://github.com/MystenLabs/sui.git", rev = "framework/mainnet", subdir = "crates/sui-framework/packages/sui-framework" }
 
 dependencies = [
   { name = "MoveStdlib" },
@@ -32,7 +32,7 @@ dependencies = [
 
 [[move.package]]
 name = "jarjar_scheduler"
-source = { git = "https://github.com/jarjar-xyz/jarjar_scheduler.git", rev = "dev", subdir = "" }
+source = { git = "https://github.com/jarjar-xyz/jarjar_scheduler.git", rev = "main", subdir = "contracts/jarjar_scheduler" }
 
 dependencies = [
   { name = "Sui" },
@@ -50,4 +50,10 @@ flavor = "sui"
 chain-id = "4c78adac"
 original-published-id = "0x5d6af2264a7599ebb4a9e092e1fd4c450eacb7c6ee4561cbcab8deee1b376683"
 latest-published-id = "0x5d6af2264a7599ebb4a9e092e1fd4c450eacb7c6ee4561cbcab8deee1b376683"
+published-version = "1"
+
+[env.mainnet]
+chain-id = "35834a8a"
+original-published-id = "0x25c3b9751885c81c8ced7356b7aa6fad4a3a837c1d92926667dc0b47aa2b4876"
+latest-published-id = "0x25c3b9751885c81c8ced7356b7aa6fad4a3a837c1d92926667dc0b47aa2b4876"
 published-version = "1"
