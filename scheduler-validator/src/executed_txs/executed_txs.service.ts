@@ -32,7 +32,7 @@ export class ExecutedTxsService {
     return event;
   }
 
-  @Cron(CronExpression.EVERY_5_SECONDS)
+  @Cron(CronExpression.EVERY_SECOND)
   async execute_queue() {
     if (this.isExecuting) {
       console.log('isGenerating true', dayjs().toString());
