@@ -65,7 +65,7 @@ export class ExecutedTxsService {
         const digest =
           await this.transactionSuiService.sendCallbackTx(eventToExec);
         await this.submitExecutedTxToDb(
-          eventToExec,
+          { ...eventToExec, digest: digest },
           this.parseTxResult(result),
         );
         console.log('callback digest', digest);
@@ -201,7 +201,7 @@ export class ExecutedTxsService {
       cost: parsedResult.cost,
       reward: parsedResult.reward,
       rewardType: parsedResult.rewardType,
-      digest: parsedResult.digest,
+      digest: event.digest,
       error: parsedResult.error,
     });
     await this.executedTxsRepository.save(executedTx);
